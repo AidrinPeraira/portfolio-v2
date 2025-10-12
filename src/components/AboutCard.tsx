@@ -18,14 +18,17 @@ export const AboutCard = (props: Props) => {
         />
 
         <div className="text-gray-500 mt-1 font-semibold inline-block w-full md:text-md tracking-wide text-justify pt-2">
-          "I'm a <b className="text-black">Software Engineer</b> with 4 years of
-          experience, currently working in the Platform Engineering team at
-          Humanforce. I specialise in building scalable systems, and solving
-          platform-wide productivity and performance challenges across products
-          like Humanforce HR, and Workforce Management - used by 600,000+ users.
-          I hold a Bachelor's degree in Computer Science from Queensland
-          University of Technology. I enjoy exploring new tech in my free
-          time.";
+          I'm a <b className="text-black">Full Stack Developer</b> with a unique
+          foundation in <b className="text-black">Civil Engineering</b> and
+          entrepreneurship. My journey into tech was born from a practical need
+          to automate my own business operations, which sparked a passion for
+          solving problems with code. This background gives me a distinct
+          perspective on project management, client needs, and end-to-end
+          execution. <br /> <br /> I build full-stack applications using modern
+          technologies including{" "}
+          <b className="text-black">React, Node.js, TypeScript, and SQL</b>. My
+          projects, such as a multi-vendor e-commerce platform, demonstrate my
+          ability to develop complex, scalable, and user-focused solutions.
         </div>
       </div>
     </div>

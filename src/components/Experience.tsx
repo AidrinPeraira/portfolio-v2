@@ -10,69 +10,64 @@ import {
 
 const myExp = [
   {
-    companyName: "Innovate Solutions Inc.",
-    compnayLogo: "I",
-    role: "Senior Software Engineer",
-    from: "Feb 2024",
+    id: "item-1",
+    companyName: "Brototype (Brocamp)",
+    compnayLogo: "B",
+    logoBg: "bg-yellow-100",
+    logoColor: "text-yellow-800",
+    role: "Full Stack Developer Trainee & Communication Coordinator",
+    from: "Oct 2024",
     to: "Present",
     description: [
-      "Architected and developed scalable microservices using Go and gRPC, handling over 1 million daily requests.",
-      "Led the migration of a monolithic application to a cloud-native architecture on Google Cloud Platform (GCP), resulting in a 40% reduction in operational costs.",
-      "Implemented a CI/CD pipeline using Jenkins and Docker, automating testing and deployment processes and reducing deployment time by 75%.",
-      "Mentored junior developers, conducted code reviews, and established best practices for software development within the team.",
-      "Designed and implemented a real-time data processing pipeline using Apache Kafka and Flink.",
+      "Undergoing an intensive, project-based full-stack development program focused on the MERN stack (MongoDB, Express.js, React, Node.js), SQL, and TypeScript.",
+      "Developed 'Local Shop', a full-stack B2B e-commerce platform for bulk purchases, from concept to deployment.",
+      "Currently architecting and building a car-pooling web application as a major project.",
+      "Serve as a Senior Communication Coordinator, mentoring and assisting in the training of other students in the program.",
     ],
   },
   {
-    companyName: "Tech Solutions Global",
-    compnayLogo: "T",
-    role: "Software Engineer",
-    from: "Jun 2022",
-    to: "Jan 2024",
+    id: "item-2",
+    companyName: "Navam Architecture (Founder / Freelance)",
+    compnayLogo: "N",
+    logoBg: "bg-blue-100",
+    logoColor: "text-blue-800",
+    role: "Founder & Civil Engineer",
+    from: "Oct 2023",
+    to: "Sept 2024",
     description: [
-      "Developed and maintained a customer-facing web application using a MERN stack (MongoDB, Express.js, React, Node.js).",
-      "Integrated third-party APIs like Stripe for payment processing and Twilio for SMS notifications.",
-      "Wrote comprehensive unit and integration tests using Jest and React Testing Library, achieving 90% code coverage.",
-      "Collaborated with product managers and designers in an Agile environment to deliver new features on a bi-weekly sprint cycle.",
-      "Optimized database queries in MongoDB, improving API response times by an average of 200ms.",
+      "Founded and managed a freelance civil engineering practice, overseeing all aspects from client acquisition to project completion.",
+      "Designed architectural plans, elevations, and 3D models for residential projects using AutoCAD, Revit, and Lumion.",
+      "Conducted lead generation through digital marketing and handled sales and client negotiations to secure projects.",
+      "Managed end-to-end project execution, including cost estimation, material procurement, labor management, and on-site supervision.",
+      "Prepared and submitted all necessary technical drawings and documentation to government departments for permits and approvals.",
     ],
   },
   {
-    companyName: "Digital Creations",
-    compnayLogo: "D",
-    role: "Junior Web Developer",
-    from: "May 2021",
-    to: "May 2022",
+    id: "item-3",
+    companyName: "Onesto & Mercado Pvt. Ltd.",
+    compnayLogo: "O",
+    logoBg: "bg-green-100",
+    logoColor: "text-green-800",
+    role: "Site Engineer",
+    from: "Sept 2021",
+    to: "Sept 2023",
     description: [
-      "Assisted in the development of client websites using HTML, CSS, JavaScript, and WordPress.",
-      "Fixed bugs and implemented minor features on existing web applications.",
-      "Participated in daily stand-ups and contributed to sprint planning sessions.",
-      "Gained experience with version control systems, primarily Git and GitHub.",
-      "Created responsive web layouts using CSS Flexbox and Grid.",
-    ],
-  },
-  {
-    companyName: "Academic University",
-    compnayLogo: "A",
-    role: "Research Assistant",
-    from: "Sep 2020",
-    to: "Apr 2021",
-    description: [
-      "Developed data analysis scripts in Python using Pandas and NumPy to process experimental results.",
-      "Contributed to a research paper on machine learning algorithms for pattern recognition.",
-      "Maintained the lab's computational resources and software environment.",
+      "Supervised the end-to-end construction of more than five residential building and interior projects across Kerala.",
+      "Resolved on-site technical conflicts and enforced quality control to ensure all work met project specifications and standards.",
+      "Managed site logistics, including the timely procurement and availability of construction materials to prevent project delays.",
+      "Maintained detailed records of purchases, material usage, and labor, contributing to waste reduction and accurate financial tracking.",
+      "Collaborated with architects, designers, and contractors to ensure seamless project execution and compliance with regulations.",
     ],
   },
 ];
-
 type Props = {};
 
 export const Experience = (props: Props) => {
   return (
-    <div className="flex  flex-col  justify-between" id="experience">
+    <div className="flex flex-col justify-between" id="experience">
       <div>
         <div className="text-black text-2xl font-bold tracking-wide">
-          My Experience
+          Work Experience
         </div>
 
         <div className="text-black mt-1 font-semibold inline-block w-full md:text-md tracking-wide text-justify pt-2">
@@ -80,53 +75,39 @@ export const Experience = (props: Props) => {
             type="single"
             collapsible
             className="w-full"
-            defaultValue="item-1"
+            defaultValue=""
           >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Product Information</AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                  Our flagship product combines cutting-edge technology with
-                  sleek design. Built with premium materials, it offers
-                  unparalleled performance and reliability.
-                </p>
-                <p>
-                  Key features include advanced processing capabilities, and an
-                  intuitive user interface designed for both beginners and
-                  experts.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Shipping Details</AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                  We offer worldwide shipping through trusted courier partners.
-                  Standard delivery takes 3-5 business days, while express
-                  shipping ensures delivery within 1-2 business days.
-                </p>
-                <p>
-                  All orders are carefully packaged and fully insured. Track
-                  your shipment in real-time through our dedicated tracking
-                  portal.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Return Policy</AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                  We stand behind our products with a comprehensive 30-day
-                  return policy. If you&apos;re not completely satisfied, simply
-                  return the item in its original condition.
-                </p>
-                <p>
-                  Our hassle-free return process includes free return shipping
-                  and full refunds processed within 48 hours of receiving the
-                  returned item.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
+            {myExp.map((exp) => (
+              <AccordionItem value={exp.id} key={exp.id}>
+                <AccordionTrigger className="hover:no-underline text-md">
+                  <div className="flex justify-between w-full items-center">
+                    <div className="flex items-center gap-4">
+                      <div
+                        className={`h-11 w-11 rounded-full flex items-center justify-center font-bold text-md ${exp.logoBg} ${exp.logoColor}`}
+                      >
+                        {exp.compnayLogo}
+                      </div>
+                      <div className="text-left">
+                        <p className="font-bold">{exp.companyName}</p>
+                        <p className="text-sm text-neutral-500">{exp.role}</p>
+                      </div>
+                    </div>
+                    <div className="text-sm text-neutral-500 text-right">
+                      <p>
+                        {exp.from} - {exp.to}
+                      </p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pl-[60px]">
+                  <ul className="list-disc space-y-2 text-neutral-600">
+                    {exp.description.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </div>
