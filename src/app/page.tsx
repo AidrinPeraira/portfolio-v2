@@ -17,7 +17,7 @@ export default function Home() {
           <Experience />
           <Education />
         </div>
-        <Navbar />
+        {/* <Navbar /> */}
       </BackgroundWaves>
     </div>
   );
