@@ -29,7 +29,6 @@ export default function Projects() {
 
           <ProjectsCards />
         </div>
-        <Navbar />
       </BackgroundWaves>
     </div>
 
