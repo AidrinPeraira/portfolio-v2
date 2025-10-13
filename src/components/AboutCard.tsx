@@ -24,11 +24,16 @@ export const AboutCard = (props: Props) => {
           to automate my own business operations, which sparked a passion for
           solving problems with code. This background gives me a distinct
           perspective on project management, client needs, and end-to-end
-          execution. <br /> <br /> I build full-stack applications using modern
-          technologies including{" "}
+          execution.
+          <br /> <br />I build full-stack applications using modern technologies
+          including{" "}
           <b className="text-black">React, Node.js, TypeScript, and SQL</b>. My
           projects, such as a multi-vendor e-commerce platform, demonstrate my
           ability to develop complex, scalable, and user-focused solutions.
+          <br /> <br />
+          Outside of coding, I enjoy capturing everyday moments through my lens
+          — I’m an<b className="text-black"> amateur photographer </b>who loves
+          taking random photos of things I find amusing or inspiring.
         </div>
       </div>
     </div>

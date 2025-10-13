@@ -4,11 +4,12 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
-  IconBrandX,
-  IconExchange,
+  IconBrandLinkedin,
+  IconBrandMedium,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
+  IconBuildingBurjAlArab,
+  IconCamera,
+  IconMicroscope,
 } from "@tabler/icons-react";
 
 type Props = {};
@@ -20,56 +21,51 @@ function Navbar({}: Props) {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
 
     {
-      title: "Products",
+      title: "Projects",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMicroscope className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
-      icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "/projects",
     },
 
+    // {
+    //   title: "Designs",
+    //   icon: (
+    //     <IconBuildingBurjAlArab className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "/architecture-designs",
+    // },
     {
-      title: "Twitter",
+      title: "Photography",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconCamera className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/photography",
+    },
+    {
+      title: "Linkedin",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/aidrinperaira/",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/AidrinPeraira",
+    },
+    {
+      title: "Blog",
+      icon: (
+        <IconBrandMedium className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://medium.com/@aidrin.peraira",
     },
   ];
 

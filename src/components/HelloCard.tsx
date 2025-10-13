@@ -3,6 +3,7 @@
 import React from "react";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 type Props = {};
 
@@ -16,22 +17,23 @@ const image =
 
 const HelloCard = (props: Props) => {
   return (
-    <div className="flex justify-between gap-2" id="hello">
-      <div>
+    <div className="flex flex-col justify-between gap-2" id="hello">
+      <div className="flex">
         <TextGenerateEffect
           words={hello}
           className="text-black inline-block text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
         />
-
-        <TextGenerateEffect
-          words={description}
-          duration={0.1}
-          className="text-black font-medium inline-block max-w-full] md:text-xl"
-        />
+        <Avatar className="min-w-[100px] min-h-[100px]  md:min-w-[150px] md:min-h-[150px] md:mr-10 mt-5">
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
       </div>
-      {/* <div className="flex-none">
-        <img src={image} className=" object-fill photo-frame " alt="" />
-      </div> */}
+
+      <TextGenerateEffect
+        words={description}
+        duration={0.1}
+        className="text-black font-medium inline-block max-w-full] md:text-xl"
+      />
     </div>
   );
 };
