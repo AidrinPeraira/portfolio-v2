@@ -3,6 +3,38 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
+//data
+
+const projects = [
+  {
+    title: "LocalShop",
+    description:
+      "A B2B e-commerce marketplace specifically designed to connect local manufacturers and distributors with retailers.",
+    // Note: You should replace this URL with a screenshot of your actual project dashboard
+    image:
+      "https://res.cloudinary.com/localshopcloudinary/image/upload/v1764970639/LocalShop_xen1ba.jpg",
+    liveLink: "https://localshop.aidrinperaira.com",
+    githubLink: "https://github.com/AidrinPeraira/local-shop", // Add your actual GitHub link here
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Razorpay",
+      "AWS (EC2)",
+    ],
+    fullDescription:
+      "LocalShop is the digital infrastructure for local supply chains, transforming the chaotic offline process of bulk buying into a streamlined online experience. It solves the problems of fragmented markets, opaque pricing, and tedious manual negotiations by offering a centralized platform for discovery, automated pricing, and secure payments.",
+    features: [
+      "Smart Discount Logic: Automated tiered pricing (e.g., 'Buy 50, Get 5% Off') calculated in real-time.",
+      "Dynamic Product Variants: Combinatorial algorithm to automatically generate SKUs (Size, Color, Grade).",
+      "Secure B2B Payments: Integrated Razorpay supporting NEFT/RTGS for high-value wholesale transactions.",
+      "Role-Based Access: Dedicated dashboards for Admin (Controller), Sellers, and Buyers.",
+      "Scalable Infrastructure: Deployed on AWS EC2 with MongoDB for flexible data modeling.",
+    ],
+  },
+];
+
 export default function ProjectsCards() {
   const [active, setActive] = useState<(typeof projects)[number] | null>(null);
   const id = useId();
@@ -213,7 +245,7 @@ export default function ProjectsCards() {
               <div className="flex-1 p-5 sm:py-5 sm:pr-5 sm:pl-0 flex flex-col justify-center">
                 <motion.h3
                   layoutId={`title-${project.title}-${id}`}
-                  className="font-bold text-gray-900 text-xl md:text-2xl mb-2  transition-colors"
+                  className="font-bold text-gray-900 text-xl md:text-2xl mb-2 transition-colors"
                 >
                   {project.title}
                 </motion.h3>
@@ -269,98 +301,3 @@ const CloseIcon = () => {
     </svg>
   );
 };
-
-const projects = [
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce solution with real-time inventory management and payment processing",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-    liveLink: "https://example.com",
-    githubLink: "https://github.com/example",
-    technologies: [
-      "React",
-      "Node.js",
-      "PostgreSQL",
-      "Stripe",
-      "Redux",
-      "Tailwind CSS",
-    ],
-    fullDescription:
-      "Built a comprehensive e-commerce platform from scratch featuring user authentication, product catalog, shopping cart, order management, and secure payment integration. Implemented real-time inventory tracking and admin dashboard for managing products and orders.",
-    features: [
-      "Secure user authentication with JWT",
-      "Real-time inventory synchronization",
-      "Stripe payment integration",
-      "Admin dashboard for product management",
-      "Order tracking and email notifications",
-      "Responsive design for all devices",
-    ],
-  },
-  {
-    title: "Task Management Dashboard",
-    description:
-      "Collaborative project management tool with real-time updates and team analytics",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-    liveLink: "https://example.com",
-    githubLink: "https://github.com/example",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Socket.io", "Prisma"],
-    fullDescription:
-      "Developed a real-time collaborative task management application allowing teams to organize projects, assign tasks, and track progress. Features drag-and-drop interface, real-time collaboration, and comprehensive analytics dashboard.",
-    features: [
-      "Drag-and-drop Kanban board interface",
-      "Real-time collaboration with WebSockets",
-      "Team performance analytics",
-      "File attachments and comments",
-      "Custom workflow automation",
-      "Mobile-responsive design",
-    ],
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "Machine learning powered content creation tool with natural language processing",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-    liveLink: "https://example.com",
-    technologies: ["Python", "Flask", "React", "OpenAI API", "Docker", "AWS"],
-    fullDescription:
-      "Created an AI-powered content generation platform that helps users create blog posts, marketing copy, and social media content. Integrated advanced NLP models and built a user-friendly interface for content refinement.",
-    features: [
-      "Multiple content types (blog, ads, social media)",
-      "Tone and style customization",
-      "Content history and version control",
-      "SEO optimization suggestions",
-      "Export to multiple formats",
-      "Usage analytics and insights",
-    ],
-  },
-  {
-    title: "Weather Forecast App",
-    description:
-      "Beautiful weather application with location-based forecasts and interactive maps",
-    image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-    liveLink: "https://example.com",
-    githubLink: "https://github.com/example",
-    technologies: [
-      "Vue.js",
-      "Express",
-      "OpenWeather API",
-      "Mapbox",
-      "Chart.js",
-    ],
-    fullDescription:
-      "Built a comprehensive weather application featuring current conditions, hourly and weekly forecasts, severe weather alerts, and interactive weather maps. Implemented geolocation for automatic location detection.",
-    features: [
-      "7-day weather forecast with hourly breakdown",
-      "Interactive weather maps",
-      "Severe weather alerts",
-      "Multiple location management",
-      "Weather trends visualization",
-      "Dark/light theme toggle",
-    ],
-  },
-];
