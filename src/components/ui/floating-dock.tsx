@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 
 import { useRef, useState } from "react";
+import { ModeToggle } from "../theme-toggle";
 
 export const FloatingDock = ({
   items,
@@ -73,6 +74,8 @@ const FloatingDockMobile = ({
             ))}
           </motion.div>
         )}
+
+        <ModeToggle />
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
