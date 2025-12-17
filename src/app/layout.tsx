@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/Navbar";
+import { cn } from "@/lib/utils";
+import { BackgroundWaves } from "@/components/BackgroundWavees";
 
 export const metadata: Metadata = {
   title: "Portfolio: Aidrin Peraira",
@@ -25,14 +27,22 @@ export default function RootLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <div className="">
-            <Navbar />
-          </div>
+          <BackgroundWaves>
+            <div
+              className={cn(
+                "min-h-screen font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6"
+              )}
+            >
+              {children}
+              <div className="">
+                <Navbar />
+              </div>
+            </div>
+          </BackgroundWaves>
         </ThemeProvider>
       </body>
     </html>
