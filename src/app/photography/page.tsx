@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 // --- Photo Data ---
 const photos = [
@@ -116,8 +117,28 @@ export default function PhotographyGallery() {
     setImages(shuffleArray(photos));
   }, []);
 
+  const BLUR_FADE_DELAY = 0.04;
+
   return (
     <section className="min-h-screen">
+      <BlurFade delay={BLUR_FADE_DELAY}>
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+          <div className="space-y-2">
+            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              Gallery
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Life Through My Lens
+            </h2>
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[600px]">
+              When I&apos;m not writing code or managing sites, I enjoy
+              exploring the world with my camera. Here is a collection of
+              moments and perspectives I&apos;ve captured along the way.
+            </p>
+          </div>
+        </div>
+      </BlurFade>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

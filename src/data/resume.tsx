@@ -113,21 +113,10 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "#",
-        icon: Icons.x,
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "#",
-        icon: Icons.youtube,
-        navbar: true,
-      },
-      email: {
+
+      whatsapp: {
         name: "Send Email",
-        url: "#",
+        url: " https://wa.me/919400409843",
         icon: Icons.email,
         navbar: false,
       },
