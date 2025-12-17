@@ -117,7 +117,7 @@ export default function PhotographyGallery() {
   }, []);
 
   return (
-    <section className="min-h-screen bg-neutral-950 py-16 px-4 sm:px-8 lg:px-16 xl:px-24">
+    <section className="min-h-screen">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

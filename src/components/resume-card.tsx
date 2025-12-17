@@ -19,6 +19,7 @@ interface ResumeCardProps {
   period: string;
   description?: string;
 }
+
 export const ResumeCard = ({
   logoUrl,
   altText,
@@ -44,28 +45,33 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      {/* Added bg-transparent, border-none, and shadow-none 
+          to remove the card's physical container appearance.
+      */}
+      <Card className="flex bg-transparent  shadow-none">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="size-11 m-auto background-white ">
             <AvatarImage
               src={logoUrl}
               alt={altText}
-              className="object-contain"
+              className="object-contain bg-black "
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
         <div className="flex-grow ml-4 items-center flex-col group">
-          <CardHeader>
+          <CardHeader className="p-0">
+            {" "}
+            {/* Added p-0 to remove default padding */}
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
                 {badges && (
-                  <span className="inline-flex gap-x-1">
+                  <span className="inline-flex gap-x-1 ml-2">
                     {badges.map((badge, index) => (
                       <Badge
                         variant="secondary"
-                        className="align-middle text-xs"
+                        className="align-middle text-[10px]"
                         key={index}
                       >
                         {badge}
@@ -84,21 +90,22 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && (
+              <div className="font-sans text-xs mt-1">{subtitle}</div>
+            )}
           </CardHeader>
           {description && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
-
                 height: isExpanded ? "auto" : 0,
               }}
               transition={{
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-2 text-xs sm:text-sm text-muted-foreground"
             >
               {description}
             </motion.div>

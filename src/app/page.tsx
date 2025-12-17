@@ -1,11 +1,13 @@
 import { HackathonCard } from "@/components/hackathon-card";
+import BlurFade from "@/components/magicui/blur-fade";
+import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { BlurFade } from "@/components/ui/blur-fade";
-import BlurFadeText from "@/components/ui/blur-fade-text";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -31,26 +33,30 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
+              <Avatar className="h-auto w-32 rounded-xl border-none">
+                <AvatarImage
+                  alt={DATA.name}
+                  src={DATA.avatarUrl}
+                  className="aspect-auto object-cover"
+                />
+                <AvatarFallback className="rounded-xl">
+                  {DATA.initials}
+                </AvatarFallback>
               </Avatar>
             </BlurFade>
           </div>
         </div>
       </section>
-
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            <Markdown>{DATA.summary}</Markdown>
-          </div>
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {DATA.summary}
+          </Markdown>
         </BlurFade>
       </section>
-
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -76,7 +82,6 @@ export default function Page() {
           ))}
         </div>
       </section>
-
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -84,11 +89,11 @@ export default function Page() {
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
-              key={education.school + id.toString()}
+              key={education.school}
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ResumeCard
-                key={education.school + id.toString()}
+                key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
@@ -100,7 +105,6 @@ export default function Page() {
           ))}
         </div>
       </section>
-
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -115,7 +119,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -135,6 +138,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
+
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
               <BlurFade
@@ -155,9 +159,20 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
+
+          {/* View More Button */}
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <div className="flex justify-center mt-8">
+              <Link href="/projects">
+                <Button variant="outline" className="group gap-2">
+                  View All Projects
+                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </div>
+          </BlurFade>
         </div>
       </section>
-
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -201,7 +216,6 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
