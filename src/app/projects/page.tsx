@@ -5,8 +5,30 @@ import { AnimatePresence, motion } from "motion/react";
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
 import { useOutsideClick } from "@/hooks/useOtsideClick";
+import Image from "next/image"; // Import Next.js Image
 
 const BLUR_FADE_DELAY = 0.04;
+
+const CloseIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4 text-black dark:text-white"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 6l-12 12" />
+      <path d="M6 6l12 12" />
+    </svg>
+  );
+};
 
 export default function ProjectsPage() {
   const [active, setActive] = useState<(typeof DATA.projects)[number] | null>(
@@ -68,9 +90,12 @@ export default function ProjectsPage() {
               className="w-full max-w-[600px] h-fit max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden z-[100] shadow-2xl"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
+                {/* Replaced img with Image */}
+                <Image
                   src={active.image || "/placeholder-project.png"}
                   alt={active.title}
+                  width={600}
+                  height={400}
                   className="w-full h-64 lg:h-80 object-cover object-top"
                 />
               </motion.div>
@@ -148,12 +173,14 @@ export default function ProjectsPage() {
             >
               <motion.div
                 layoutId={`image-${project.title}-${id}`}
-                className="overflow-hidden"
+                className="overflow-hidden relative h-48 w-full"
               >
-                <img
+                {/* Replaced img with Image */}
+                <Image
                   src={project.image || "/placeholder-project.png"}
                   alt={project.title}
-                  className="h-48 w-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               </motion.div>
               <div className="p-4 flex flex-col gap-2">
@@ -195,24 +222,3 @@ export default function ProjectsPage() {
     </section>
   );
 }
-
-export const CloseIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-black dark:text-white"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </svg>
-  );
-};
