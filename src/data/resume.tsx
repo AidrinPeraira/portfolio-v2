@@ -204,41 +204,42 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "#",
+          href: "http://localshop.aidrinperaira.com",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "#",
+          href: "https://github.com/AidrinPeraira/local-shop",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image:
+        "https://res.cloudinary.com/localshopcloudinary/image/upload/v1764970639/LocalShop_xen1ba.jpg",
       video: "",
     },
-    {
-      title: "Car-Pooling App",
-      href: "#",
-      dates: "2024 - Present",
-      active: true,
-      description:
-        "Currently architecting and building a car-pooling web application as a major project.",
-      technologies: ["React", "TypeScript", "SQL"],
-      links: [
-        {
-          type: "Website",
-          href: "#",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "#",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
+    // {
+    //   title: "Car-Pooling App",
+    //   href: "#",
+    //   dates: "2024 - Present",
+    //   active: true,
+    //   description:
+    //     "Currently architecting and building a car-pooling web application as a major project.",
+    //   technologies: ["React", "TypeScript", "SQL"],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "#",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "#",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video: "",
+    // },
   ],
   hackathons: [],
 } as ResumeData;
