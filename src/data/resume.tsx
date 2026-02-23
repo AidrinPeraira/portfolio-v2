@@ -217,6 +217,36 @@ export const DATA = {
         "https://res.cloudinary.com/localshopcloudinary/image/upload/v1764970639/LocalShop_xen1ba.jpg",
       video: "",
     },
+    {
+      title: "NavBuddy – Mapbox Navigation MVP",
+      href: "https://navbuddy.aidrinperaira.com/",
+      dates: "2026",
+      active: true,
+      description:
+        "A Mapbox-powered navigation MVP built to understand routing systems, map rendering, and geospatial workflows. Integrates Mapbox APIs with OpenStreetMap data to visualize locations and routes. Designed as a foundational prototype for building a scalable, real-world navigation system.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Mapbox GL JS",
+        "OpenStreetMap",
+        "TailwindCSS"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://navbuddy.aidrinperaira.com/",
+          icon: <Icons.globe className=\"size-3\" />,
+    },
+        {
+          type: "Source",
+          href: "https://github.com/AidrinPeraira/navigation-app",
+          icon: <Icons.github className=\"size-3\" />,
+    },
+      ],
+      image:
+        "https://res.cloudinary.com/localshopcloudinary/image/upload/v1771833536/Map_SIte_h5gude.png",
+      video: "",
+    },
     // {
     //   title: "Car-Pooling App",
     //   href: "#",
