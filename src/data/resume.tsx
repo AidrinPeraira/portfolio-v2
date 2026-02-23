@@ -235,12 +235,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://navbuddy.aidrinperaira.com/",
-          icon: <Icons.globe className=\"size-3\" />,
+          icon: <Icons.globe className="size-3" />,
     },
         {
           type: "Source",
           href: "https://github.com/AidrinPeraira/navigation-app",
-          icon: <Icons.github className=\"size-3\" />,
+          icon: <Icons.github className="size-3" />,
     },
       ],
       image:
