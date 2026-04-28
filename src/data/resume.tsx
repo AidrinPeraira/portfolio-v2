@@ -194,6 +194,29 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Athena AI",
+      href: "https://athena-ai.aidrinperaira.com/",
+      dates: "2026",
+      active: true,
+      description:
+        "A RAG (Retrieval-Augmented Generation) chatbot designed to help users practice for HR interviews. It uses vector search on a curated knowledge base of mentor-provided HR questions and strategies to generate clear, actionable, and context-aware advice.",
+      technologies: ["Next.js", "TypeScript", "Google Gemini", "AstraDB", "LangChain"],
+      links: [
+        {
+          type: "Website",
+          href: "https://athena-ai.aidrinperaira.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AidrinPeraira/athena-ai",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://res.cloudinary.com/localshopcloudinary/image/upload/v1777381032/Athena_AI_cgvlyu.jpg",
+      video: "",
+    },
+    {
       title: "Local Shop",
       href: "#",
       dates: "2024",
@@ -236,12 +259,12 @@ export const DATA = {
           type: "Website",
           href: "https://navbuddy.aidrinperaira.com/",
           icon: <Icons.globe className="size-3" />,
-    },
+        },
         {
           type: "Source",
           href: "https://github.com/AidrinPeraira/navigation-app",
           icon: <Icons.github className="size-3" />,
-    },
+        },
       ],
       image:
         "https://res.cloudinary.com/localshopcloudinary/image/upload/v1771833536/Map_SIte_h5gude.png",
