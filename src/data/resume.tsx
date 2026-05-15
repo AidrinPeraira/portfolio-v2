@@ -103,13 +103,13 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/aidrin",
+        url: "https://github.com/AidrinPeraira",
         icon: Icons.github,
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/aidrin",
+        url: "https://linkedin.com/in/AidrinPeraira",
         icon: Icons.linkedin,
         navbar: true,
       },
